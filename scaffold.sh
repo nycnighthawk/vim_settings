@@ -27,7 +27,7 @@ then
 fi
 for file_name in $(echo "vimrc my_keymap.vim my_setting.vim my_utilsnips.vim")
 do
-    CURL -fLo ${file_name} \
+    ${CURL} -fLo ${file_name} \
         https://raw.githubusercontent.com/nycnighthawk/vim_settings/master/.vim/${file_name}
 done
 vim +PlugUpdate +PlugUpgrade +qall
