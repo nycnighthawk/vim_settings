@@ -29,7 +29,7 @@ if has("gui_running")
     if has('mac') || has('win64')
         set guifont=Monaco:h12
     else
-        set guifont="Monaco 9"
+        set guifont=Monaco\ 10
     endif
     set guioptions-=m      " remove menubar
     set guioptions-=T      " remove toolbar
