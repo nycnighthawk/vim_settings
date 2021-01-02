@@ -10,8 +10,10 @@ vnoremap <leader>e <Esc>
 vnoremap <leader><space> \
 vnoremap <leader><leader> \\
 tnoremap <leader>e <c-w>N
-if !has('nvim') 
-    set macmeta
+if !has('nvim')
+    if has('mac')
+        set macmeta
+    endif
 endif
 nnoremap zh :let &hls=!&hls<CR>
 
