@@ -22,9 +22,15 @@ if has("gui_running")
     set guioptions-=e      " needed to show tabline in gvim
     set lines=50
     set columns=160
-    set guifont=Monaco:h12
     set lines=999 columns=999
-    set transparency=6
+    if exists('&transparency')
+        set transparency=6
+    endif
+    if has('mac') || has('win64')
+        set guifont=Monaco:h12
+    else
+        set guifont="Monaco 9"
+    endif
     set guioptions-=m      " remove menubar
     set guioptions-=T      " remove toolbar
     set guioptions-=r      " remove right-hand scroll bar
